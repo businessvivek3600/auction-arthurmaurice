@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="app_name">Watch Auctions</string>
+    <string name="app_description">Watch Auctions is an app that allows you to watch auctions and bid on them.</string>
+    <string name="currency_symbol">Fr.</string>
+</resources>

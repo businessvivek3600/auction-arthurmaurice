@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "882974995452",
+    "project_id": "action-demo-34fef",
+    "storage_bucket": "action-demo-34fef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:882974995452:android:3948de445404456c353879",
+        "android_client_info": {
+          "package_name": "com.touchwood.auction_demo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQSW1VrrYGwG2NLClq_rmoTi3sfWeYxEs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
