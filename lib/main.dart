@@ -98,6 +98,7 @@ class _MyAppState extends State<MyApp> {
     HomeWidgetSetup.instance.init(backgroundCallback);
     HandleNotification.configureSelectNotificationSubject();
     HandleNotification.configureDidReceiveLocalNotificationSubject();
+    //
   }
 
   @override
