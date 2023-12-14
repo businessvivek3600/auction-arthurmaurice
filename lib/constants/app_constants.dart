@@ -6,7 +6,7 @@ class AppConst {
   static const tag = 'AppConst';
   static String appName = "Auction App";
   static const String appVersion = "1.0.0";
-  static const String packageName = "com.arthurmaurice.flutter_app";
+  static String packageName = "";
   static const String appStoreId = "auction/1234567890";
   static String appDescription = "Flutter App Description";
   static const String appIcon = "assets/images/logo-no-background.png";
@@ -36,6 +36,8 @@ class AppConst {
           case 'currency_symbol':
             currencySymbol = item.value;
             break;
+          case 'package_name':
+            packageName = item.value;
           default:
             break;
         }

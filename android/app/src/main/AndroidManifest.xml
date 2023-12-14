@@ -45,13 +45,28 @@
             <!-- deep link -->
             <meta-data android:name="flutter_deeplinking_enabled" android:value="true" />
             <intent-filter android:autoVerify="true">
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="http" android:host="arthurmaurice.com" />
+                <action android:name="android.intent.action.VIEW" /> <!-- Specify the ACTION_VIEW
+                intent action so that the intent filter can be reached from Google Search. -->
+                <category android:name="android.intent.category.DEFAULT" /> <!-- include the DEFAULT
+                category. This allows your app to respond to implicit intents. Without this, the
+                activity can be started only if the intent specifies your app component name. -->
+
+                <category android:name="android.intent.category.BROWSABLE" /><!-- It is required in
+                order for the intent filter to be accessible from a web
+                    browser. Without it, clicking a link in a browser cannot resolve to your app. -->
+
+
+                <!-- Add one or more <data> tags, each of which represents a URI format that
+                resolves to the activity. At minimum, the <data> tag must include the android:scheme
+                attribute. -->
+                <data android:scheme="http" />
                 <data android:scheme="https" />
-                <data android:pathPrefix="*" />
-                <data android:pathPrefix="/" />
+
+                <data android:host="arthurmaurice.com" />
+
+                <!-- <data android:pathPrefix="*" /> -->
+                <data android:pathPrefix="/" /> <!-- note that the leading "/" is required for
+                pathPrefix-->
                 <data android:pathPrefix="/home" />
                 <data android:pathPrefix="/home/account" />
                 <data android:pathPrefix="/home/auction/" />

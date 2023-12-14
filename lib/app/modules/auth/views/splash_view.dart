@@ -34,17 +34,16 @@ class _SplashViewState extends State<SplashView> {
   int duration = 0;
   int position = 0;
   void initController() {
-    _controller =
-        VideoPlayerController.asset('assets/videos/auction_splash.mp4')
-          ..initialize()
-              // ..setLooping(true)
-              .then((_) {
-            _controller.play();
-            duration = _controller.value.duration.inMilliseconds;
-            if (_controller.value.isCompleted) {
-              logger.i('Video Completed');
-            }
-          });
+    _controller = VideoPlayerController.asset('assets/videos/splash_2.mp4')
+      ..initialize()
+          // ..setLooping(true)
+          .then((_) {
+        _controller.play();
+        duration = _controller.value.duration.inMilliseconds;
+        if (_controller.value.isCompleted) {
+          logger.i('Video Completed');
+        }
+      });
     _controller.addListener(_listner);
   }
 
@@ -56,7 +55,7 @@ class _SplashViewState extends State<SplashView> {
     }
     if (_controller.value.isInitialized) {
       duration = _controller.value.duration.inMilliseconds;
-      if (_controller.value.position.inMilliseconds >= 5 * 1000) {
+      if (_controller.value.position.inMilliseconds >= 3 * 1000) {
         context.go(Routes.intro);
       }
     }
@@ -82,7 +81,7 @@ class _SplashViewState extends State<SplashView> {
                   children: [
                     SizedBox(
                       width: double.maxFinite,
-                      height: MediaQuery.of(context).size.height * 0.8,
+                      height: MediaQuery.of(context).size.height,
                       child: Transform.scale(
                         scale: (_controller.value.aspectRatio /
                             (getWidth(context) / getHeight(context))),

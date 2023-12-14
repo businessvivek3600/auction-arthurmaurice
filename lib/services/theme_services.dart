@@ -19,10 +19,17 @@ class ThemeService {
   static final ThemeService _instance = ThemeService._internal();
   static ThemeService get instance => _instance;
 
+  final String darkThemeKey = 'dark';
+  final String lightThemeKey = 'light';
+  final String primaryThemeKey = 'primary';
+  final String websiteThemeKey = 'website';
+  final String darkBlueThemeKey = 'darkBlue';
+  final String halloweenThemeKey = 'halloween';
+
   final allThemes = <String, ThemeData>{
     'dark': darkTheme(),
     'light': lightTheme(),
-    'pink': pinkTheme(),
+    'primary': primaryTheme(),
     'website': website(),
     'darkBlue': darkBlueTheme(),
     'halloween': halloweenTheme(),
@@ -44,7 +51,7 @@ class ThemeService {
     if (themeName == null) {
       // final isPlatformDark =
       //     WidgetsBinding.instance.window.platformBrightness == Brightness.dark;
-      themeName = 'pink';
+      themeName = 'primary';
     }
     return allThemes[themeName];
   }
@@ -59,7 +66,7 @@ class ThemeService {
 
   String getThemeName() {
     String? themeName = themeBox.read<String?>(themeKey);
-    themeName ??= 'pink';
+    themeName ??= 'primary';
     return themeName;
   }
 
@@ -170,7 +177,7 @@ class ThemeService {
     );
   }
 
-  static ThemeData pinkTheme() {
+  static ThemeData primaryTheme() {
     const brightness = Brightness.light;
     const mainColor = Color.fromARGB(255, 8, 1, 143);
     // const mainColor = Color.fromARGB(255, 47, 0, 255);

@@ -4,7 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
 
-class LoggerService {
+class LoggerService { 
   static final LoggerService _instance = LoggerService._internal();
   LoggerService._internal();
   static LoggerService get instance => _instance;
