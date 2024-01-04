@@ -689,7 +689,7 @@ class _BidTile extends StatelessWidget {
                 image: item.profilePic.isNotEmpty
                     ? NetworkImage(item.profilePic)
                     : assetImageProvider(MyPng.dummyUser),
-                fit: BoxFit.contain),
+                fit: BoxFit.cover),
           ),
         ),
         title: capText(item.name, context),

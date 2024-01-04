@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
-    <string name="app_name">Watch Auctions</string>
-    <string name="app_description">Watch Auctions is an app that allows you to watch auctions and bid on them.</string>
+    <string name="app_name">ARTHUR MURICE Action House</string>
+    <string name="app_description">Multivendor Auction Bidding Platform, where innovation meets opportunity. Unleash the power of competitive bidding as multiple vendors converge on a single dynamic platform, offering a diverse array of products and services.</string>
     <string name="currency_symbol">Fr.</string>
     <string name="package_name">com.arthurmaurice.auction</string>
 </resources>

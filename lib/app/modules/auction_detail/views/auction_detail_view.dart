@@ -3,7 +3,6 @@
 import 'dart:ui';
 
 import 'package:action_tds/app/modules/auction_detail/views/auction_reviews_history.dart';
-import 'package:action_tds/components/hero_tag_wdget.dart';
 import 'package:action_tds/services/share.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -147,7 +146,8 @@ class _BottomNavigationBar extends StatelessWidget {
               child: TextButton.icon(
                 onPressed: () {
                   showCupertinoModalPopup(
-                      context: context, builder: (_) => AuctionBidsHistory());
+                      context: context,
+                      builder: (_) => const AuctionBidsHistory());
                 },
                 icon: faIcon(FontAwesomeIcons.gavel,
                     color: getTheme().primaryColor),
@@ -170,7 +170,7 @@ class _BottomNavigationBar extends StatelessWidget {
                 onPressed: () {
                   showCupertinoModalPopup(
                       context: context,
-                      builder: (_) => AuctionReviewsHistory());
+                      builder: (_) => const AuctionReviewsHistory());
                 },
                 icon: assetSvg(MySvg.diamond, height: 15, width: 15),
                 label: AutoSizeText(
@@ -765,7 +765,7 @@ class _BuildTimerWidget extends StatelessWidget {
                                   enableDrag: true,
                                   // barrierColor: Colors.white.withOpacity(0.05),
                                   builder: (context) {
-                                    return AutionDetailsBidPopupView();
+                                    return const AutionDetailsBidPopupView();
                                   },
                                 );
                               },
@@ -943,7 +943,9 @@ class _AutionImagesBannerSliderState extends State<_AutionImagesBannerSlider> {
   }
 
   Widget _buildProductGraphicUI({required String path}) {
-    bool is3d = path.endsWith('.glb') || path.endsWith('.gltf');
+    bool is3d = path.endsWith('.glb') ||
+        path.endsWith('.gltf') ||
+        path.endsWith('.jar');
     if (is3d) {
       return O3D(
         src: path,

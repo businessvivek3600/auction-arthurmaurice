@@ -165,16 +165,13 @@ class _LargeBidCardState extends State<_LargeBidCard> {
                       ? widget.loading
                           ? SizedBox(
                               height: getHeight(context) * 0.03,
-                              width: getHeight(context) * 0.03,
-                            )
-                          : assetImages(
-                              MyPng.dummyUser,
+                              width: getHeight(context) * 0.03)
+                          : assetImages(MyPng.dummyUser,
                               height: getHeight(context) * 0.03,
-                              width: getHeight(context) * 0.03,
-                            )
+                              width: getHeight(context) * 0.03)
                       : buildCachedImageWithLoading(
                           image!,
-                          fit: BoxFit.contain,
+                          fit: BoxFit.cover,
                           borderRadius: paddingDefault,
                           placeholder: MyPng.watchPlaceholder,
                           h: getHeight(context) * 0.03,

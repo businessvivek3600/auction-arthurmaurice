@@ -6,9 +6,9 @@ class MySvg {
 ///png images collection [MyPng]
 class MyPng {
   ///app logo
-  static const logo = 'logo-no-background.png';
-  static const blackLogo = 'app/black.png';
-  static const whiteLogo = 'app/white.png';
+  static const logo = 'app/ARTHUR MAURICE AUCTION LOGO-01-min.png';
+  static const blackLogo = 'app/ARTHUR MAURICE AUCTION LOGO-02-min.png';
+  static const whiteLogo = 'app/ARTHUR-MAURICE-AUCTION-LOGO-03.png';
   static const short = 'app/short.png';
 
   ///user-related images

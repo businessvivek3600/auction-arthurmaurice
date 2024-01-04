@@ -34,16 +34,8 @@ class _SplashViewState extends State<SplashView> {
   int duration = 0;
   int position = 0;
   void initController() {
-    _controller = VideoPlayerController.asset('assets/videos/splash_2.mp4')
-      ..initialize()
-          // ..setLooping(true)
-          .then((_) {
-        _controller.play();
-        duration = _controller.value.duration.inMilliseconds;
-        if (_controller.value.isCompleted) {
-          logger.i('Video Completed');
-        }
-      });
+    _controller = VideoPlayerController.asset('assets/videos/splash.mp4')
+      ..initialize().then((_) => _controller.play());
     _controller.addListener(_listner);
   }
 
@@ -55,8 +47,15 @@ class _SplashViewState extends State<SplashView> {
     }
     if (_controller.value.isInitialized) {
       duration = _controller.value.duration.inMilliseconds;
-      if (_controller.value.position.inMilliseconds >= 3 * 1000) {
-        context.go(Routes.intro);
+      // if (_controller.value.position.inMilliseconds >= 2 * 1000) {
+      // }
+
+      if (_controller.value.isCompleted) {
+        logger.i('Video Completed');
+        if (mounted) {
+          Future.delayed(const Duration(milliseconds: 200),
+              () => context.go(Routes.intro));
+        }
       }
     }
   }
